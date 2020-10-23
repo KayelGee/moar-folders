@@ -41,7 +41,7 @@
 				for (const key in ui) {
 					if (ui.hasOwnProperty(key)) {
 						const ui_elem = ui[key];
-						if(ui_elem.constructor.name.includes("Directory")) ui_elem.render(true);
+						if(ui_elem.constructor.name.includes("Directory") && !ui_elem.constructor.name.includes("MacroDirectory")) ui_elem.render(true);
 
 					}
 				}
