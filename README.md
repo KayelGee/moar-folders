@@ -19,8 +19,6 @@ Use at your own risk, as this is removing a limitation set by core Foundry and c
 Go into module settings and set your preferred folder depth.
 Reload with F5 for changes to take effect.
 
-![](moar-folders.gif)
-
 ## Contact
 
 If you wish to contact me for any reason, reach me out on Discord using my tag: `KayelGee#5241`
