@@ -1,0 +1,4 @@
+{
+	"MF.SettingFolderDepth": "Maximum folder depth",
+	"MF.SettingFolderDepthHint": "Setting this will increase the maximum folder depth(Default 3). Reload (F5) for changes to take effect. This can cause UI/Performance issues, so use at your own risk."
+}
