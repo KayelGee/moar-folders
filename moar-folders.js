@@ -12,9 +12,7 @@
 			  });
 		}
 
-		static initialize(){
-			MoarFolders.registerSettings();
-		
+		static initialize(){		
 			CONST.FOLDER_MAX_DEPTH = game.settings.get(moduleName, "folderDepth") || 3;
 
 			//Monkey patch activateListeners so the create folder button is only removed from the final folder
@@ -50,5 +48,6 @@
 
 
 	}
-	Hooks.on('canvasReady', () => MoarFolders.initialize());
+	Hooks.on('init', () => MoarFolders.registerSettings());
+	Hooks.on('ready', () => MoarFolders.initialize());
 })();
