@@ -27,7 +27,10 @@
 					html.find(".folder .folder .folder .create-folder-moar").removeClass("create-folder-moar"); 
 
     				html.find(".folder ".repeat(CONST.FOLDER_MAX_DEPTH)+".create-folder").remove(); 
-					if ( game.user.isGM ) html.find('.create-folder').click(ev => this._onCreateFolder(ev));
+					if ( game.user.isGM ) {
+						html.find('.create-folder').off();
+						html.find('.create-folder').click(ev => this._onCreateFolder(ev));
+					}
 				}
 				addFunc.apply(this, arguments);
 				const result = oldactivateListeners.apply(this, arguments);
@@ -39,7 +42,7 @@
 				for (const key in ui) {
 					if (ui.hasOwnProperty(key)) {
 						const ui_elem = ui[key];
-						if(ui_elem.constructor.name.includes("Directory") && !ui_elem.constructor.name.includes("MacroDirectory")) ui_elem.render(true);
+						if(ui_elem.constructor.name.includes("Directory") && !ui_elem.constructor.name.includes("MacroDirectory")) ui_elem.render();
 
 					}
 				}
