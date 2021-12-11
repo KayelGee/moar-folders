@@ -19,8 +19,14 @@ var FOLDER_MAX_DEPTH_MOAR_FOLDERS = CONST.FOLDER_MAX_DEPTH;
 			for (const key in game) {
 				if (game.hasOwnProperty(key)) {
 					if(game[key]?.directory){
-						let dir = game[key].directory;
-						let protoclass = eval(game[key].directory.constructor.name);
+						let dir = game[key].directory;	
+						let protoclass;
+						try {
+							protoclass = eval(game[key].directory.constructor.name);							
+						} catch (error) {
+							console.debug(`Moar Folders: Directory Class not known ${game[key].directory.constructor.name}`)
+						}					
+						if(!protoclass) continue;
 
 						if(protoclass?.setupFolders){
 							let setupFolders_string = protoclass.setupFolders.toString();
