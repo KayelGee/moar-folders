@@ -1,11 +1,19 @@
 {
-	"name": "moar-folders",
+	"id": "moar-folders",
 	"title": "Moar Folders",
 	"description": "Allows increasing of the maximum folder depth. Use at your own risk, as this is removing a limitation set by core Foundry and can cause UI and performance problems.",
-	"version": "1.1.1",
-	"minimumCoreVersion": "0.8.2",
-	"compatibleCoreVersion": "0.8.9",
-	"author": "KayelGee - KayelGee#5241",
+	"version": "1.1.2",
+	"compatibility" :{
+		"minimum": 10,	
+		"verified": "10.286"
+	},
+	"authors": [
+		{
+			"name": "KayelGee",
+			"url": "https://github.com/KayelGee",
+			"discord": "KayelGee#5241"
+		}
+	],
 	"scripts": [
 		"moar-folders.js"
 	],
@@ -26,6 +34,6 @@
 	"socket": false,
 	"url": "https://github.com/KayelGee/moar-folders",
   "manifest": "https://raw.githubusercontent.com/KayelGee/moar-folders/master/module.json",
-  "download": "https://github.com/KayelGee/moar-folders/releases/download/v1.1.1/v1.1.1.zip",
-  "readme": "https://github.com/KayelGee/moar-folders/blob/v1.1.1/README.md"
+  "download": "https://github.com/KayelGee/moar-folders/releases/download/v1.1.2/v1.1.2.zip",
+  "readme": "https://github.com/KayelGee/moar-folders/blob/v1.1.2/README.md"
 }
