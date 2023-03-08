@@ -22,7 +22,7 @@ var FOLDER_MAX_DEPTH_MOAR_FOLDERS = CONST.FOLDER_MAX_DEPTH;
 						let dir = game[key].directory;	
 						let protoclass;
 						try {
-							protoclass = eval(game[key].directory.constructor.name);							
+							protoclass = game[key].directory.constructor;							
 						} catch (error) {
 							console.debug(`Moar Folders: Directory Class not known ${game[key].directory.constructor.name}`)
 						}					
